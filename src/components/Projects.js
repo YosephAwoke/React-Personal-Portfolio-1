@@ -5,8 +5,8 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img1.png";
-// import 'animate.css';
-// import TrackVisibility from 'react-on-screen';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 
 
@@ -56,11 +56,13 @@ export const Projects = () => {
             <Container>
                 <Row>
                     <Col size={12}>
-                        {/* <TrackVisibility>
+                        <TrackVisibility>
                             {({ isVisible }) =>
-                            <div className={isVisible ? "animate__animated animate__fadeIn": ""}> */}
+                            <div className={isVisible ? "animate__animated animate__slideInUp": ""}>
                                 <h2>Projects</h2>
                                 <p>Experienced in all stages of the creative and development cycle, I excel in both programming and graphic design. Proficient in Python, React, Kotlin, and Adobe Creative Suite, I bring ideas to life through design and code. I thrive in fast-paced environments, consistently delivering innovative solutions.</p>
+                            </div>}
+                        </TrackVisibility>        
                                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                         <Nav.Item>

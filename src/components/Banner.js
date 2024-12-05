@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 // import headerImg from "../assets/img/header-img.svg";
 import headerImg from "../assets/img/Jos Photo Web final.PNG";
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
+// import { isVisible } from "@testing-library/user-event/dist/utils";
 
 
 
 
-export const Banner = () => {
+
+export const Banner = ({scrollToContact}) => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
@@ -45,6 +49,8 @@ export const Banner = () => {
         }
     }
 
+    const contactRef = useRef(null);
+
 
 
     return (
@@ -53,22 +59,28 @@ export const Banner = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">
-                            Wellcome to my Portfolio
-                        </span> 
-                        <h1> {'Hi, I am Yoseph Awoke.'}
-                            {/* <span className="wrap">
-                                {text}
-                            </span> */}
-                        </h1>
-                        <h2> {'I am a '}
-                            <span className="wrap">
-                                {text}
-                            </span>
-                        </h2>
-                        <p>Experienced in all stages of the creative and development cycle, I excel in both programming and graphic design. Proficient in Python, React, Kotlin, and Adobe Creative Suite, I bring ideas to life through design and code. I thrive in fast-paced environments, consistently delivering innovative solutions.</p>   
-                        <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>                
+                        <TrackVisibility>
+                        {({ isVisible }) =>
+                            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                                <span className="tagline">
+                                    Wellcome to my Portfolio
+                                </span> 
+                                <h1> {'Hi, I am Yoseph Awoke.'}
+                                    {/* <span className="wrap">
+                                        {text}
+                                    </span> */}
+                                </h1>
+                                <h2> {'I am a '}
+                                    <span className="wrap">
+                                        {text}
+                                    </span>
+                                </h2>
+                                <p>Experienced in all stages of the creative and development cycle, I excel in both programming and graphic design. Proficient in Python, React, Kotlin, and Adobe Creative Suite, I bring ideas to life through design and code. I thrive in fast-paced environments, consistently delivering innovative solutions.</p>   
+                                <button onClick={scrollToContact}>Let's Connect <ArrowRightCircle size={25} /> </button> 
+                            </div>}
+                        </TrackVisibility>               
                     </Col>
+                    
 
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header Img"/>

@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import contactImg from "../assets/img/contact-img.svg";
 
 
-export const Contact = () => {
+
+
+export const Contact = forwardRef((props, ref) => {
     const formInitalDetails = {
         firstName: '',
         lastName: '',
@@ -50,7 +53,7 @@ export const Contact = () => {
 
     return (
 
-        <section className="contact" id="Contact">
+        <section className="contact" id="Contact" ref={ref}>
             <Container>
                 <Row className="align-items-center">    
                     <Col md={6}>
@@ -67,10 +70,10 @@ export const Contact = () => {
                                     <input type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
                                 </Col>
                                 <Col sm={6} className="px-1">
-                                    <input type="email" value={formDetails.firstName} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)}/>
+                                    <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)}/>
                                 </Col>
                                 <Col sm={6} className="px-1">
-                                    <input type="tel" value={formDetails.firstName} placeholder="Phone Number" onChange={(e) => onFormUpdate('phone', e.target.value)}/>
+                                    <input type="tel" value={formDetails.phone} placeholder="Phone Number" onChange={(e) => onFormUpdate('phone', e.target.value)}/>
                                 </Col>
 
                                 <Col>
@@ -95,4 +98,4 @@ export const Contact = () => {
     )
 
 
-}
+});

@@ -66,7 +66,7 @@ export const NavBar = () => {
                             <a href="#"><img src={navIcon2} alt=""/></a>
                             <a href="#"><img src={navIcon3} alt=""/></a>                            
                         </div>
-                        <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
+                        {/* <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button> */}
                         
 
                     </span>
