@@ -5,7 +5,7 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/Jos Photo Web final.PNG";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-// import { isVisible } from "@testing-library/user-event/dist/utils";
+
 
 
 
