@@ -52,7 +52,7 @@ export const Skills = () => {
                                     <h5> Deep Learning</h5>
                                 </div>
                                 <div className="item"> 
-                                    <img src={meter1} alt="Image4"/>
+                                    <img src={meter3} alt="Image4"/>
                                     <h5> Mobile App Development</h5>
                                 </div>
                             </Carousel>

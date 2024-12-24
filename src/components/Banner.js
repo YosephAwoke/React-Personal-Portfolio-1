@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-\
-import headerImg from "../assets/img/Jos Photo Web final.PNG";
+import headerImg from "../assets/img/Jos PhotoX Web2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -66,9 +65,7 @@ export const Banner = ({scrollToContact}) => {
                                     Wellcome to my Portfolio
                                 </span> 
                                 <h1> {'Hi, I am Yoseph Awoke.'}
-                                    {/* <span className="wrap">
-                                        {text}
-                                    </span> */}
+                                   
                                 </h1>
                                 <h2> {'I am a '}
                                     <span className="wrap">
