@@ -4,7 +4,7 @@ import {Navbar, Nav, Container} from 'react-bootstrap';
 import logo from '../assets/img/logo.svg';
 import logox from '../assets/img/Jos Logo cut2.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
+import navIcon2 from '../assets/img/git-icon.png';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import '../App.css';
 
@@ -51,9 +51,9 @@ export const NavBar = () => {
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="#"><img src={navIcon1} alt=""/></a>
-                            <a href="#"><img src={navIcon2} alt=""/></a>
-                            <a href="#"><img src={navIcon3} alt=""/></a>                            
+                            <a href="https://www.linkedin.com/in/yosephawoke/"><img src={navIcon1} alt=""/></a>
+                            <a href="https://github.com/YosephAwoke"><img src={navIcon2} alt=""/></a>
+                            <a href="https://www.instagram.com/yoseph.awoke/"><img src={navIcon3} alt=""/></a>                            
                         </div>
                         {/* <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button> */}
                         
